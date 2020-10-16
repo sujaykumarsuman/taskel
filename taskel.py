@@ -1,3 +1,4 @@
+#TEAM714
 import os
 
 
@@ -9,7 +10,8 @@ def print_menu():
         1. Date
         2. Calender
         3. Create User
-        4. Exit
+        4. Want to save your personal info?
+        5. Exit
         """)
 
 
@@ -34,6 +36,8 @@ def run(opt):
         username = input("Enter the username: ")
         os.system("useradd " + username)
     elif opt == '4':
+        os.system("cat > MyInfo.txt")
+    elif opt == '5':
         exit()
     else:
         print("Option not supported!")
